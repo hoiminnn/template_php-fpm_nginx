@@ -1,0 +1,11 @@
+services:
+  web:
+    image: php-nginx:latest
+    container_name: web
+    ports:
+      - "8080:80"
+    networks:
+      - web_network
+networks:
+  web_network:
+    driver: bridge
